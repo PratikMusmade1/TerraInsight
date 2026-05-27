@@ -78,15 +78,15 @@ tbody tr:nth-child(even) {
 }
 
 .active {
-  background: #28a745;
+  background: #2859a7;
 }
 
 .paused {
-  background: #f39c12;
+  background: #68f312;
 }
 
 .discontinued {
-  background: #dc3545;
+  background: #4b460f;
 }
 
 /* Sortable columns */
