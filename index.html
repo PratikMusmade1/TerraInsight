@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demand Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Demand Planning Grid</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+
+      <!-- Category Filter -->
+      <div class="filter-box">
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter">
+          <option value="All">All</option>
+        </select>
+      </div>
+
+      <!-- Status Filter -->
+      <div class="filter-box">
+        <label>Status:</label>
+
+        <label>
+          <input type="checkbox" class="statusFilter" value="active" checked />
+          Active
+        </label>
+
+        <label>
+          <input type="checkbox" class="statusFilter" value="paused" checked />
+          Paused
+        </label>
+
+        <label>
+          <input type="checkbox" class="statusFilter" value="discontinued" checked />
+          Discontinued
+        </label>
+      </div>
+
+    </div>
+
+    <!-- Table -->
+    <table id="demandTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+          <th>Region</th>
+          <th>Status</th>
+
+          <th class="sortable" data-week="w1">W1</th>
+          <th class="sortable" data-week="w2">W2</th>
+          <th class="sortable" data-week="w3">W3</th>
+          <th class="sortable" data-week="w4">W4</th>
+          <th class="sortable" data-week="w5">W5</th>
+          <th class="sortable" data-week="w6">W6</th>
+          <th class="sortable" data-week="w7">W7</th>
+          <th class="sortable" data-week="w8">W8</th>
+
+          <th>Total</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+
+      <tfoot>
+        <tr id="summaryRow">
+          <td colspan="4"><strong>Weekly Totals</strong></td>
+
+          <td id="sumW1">0</td>
+          <td id="sumW2">0</td>
+          <td id="sumW3">0</td>
+          <td id="sumW4">0</td>
+          <td id="sumW5">0</td>
+          <td id="sumW6">0</td>
+          <td id="sumW7">0</td>
+          <td id="sumW8">0</td>
+
+          <td id="grandTotal">0</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
